@@ -1,17 +1,17 @@
 class Rectangle:
-    def __init__(self):
-        self.x = 0
-        self.y = 0
-        self.width = 0
-        self.height = 0
-
-    def __init__(self, x, y, width, height):
+    def __init__(self, x=None, y=None, width=None, height=None):
+        if x is None:
+            x = 0
+        if y is None:
+            y = 0
+        if width is None:
+            width = 0
+        if height is None:
+            height = 0
+        if width < 0 or height < 0:
+            raise Exception("Make sure the width and height are positive.")
         self.x = x
         self.y = y
-        self.width = width
-        self.height = height
-
-    def __init__(self, width, height):
         self.width = width
         self.height = height
 
